@@ -1,7 +1,7 @@
 import pygame as pg
 
 _ = False
-block_size = 50
+block_size = 100
 mini_map = [
     [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
     [1, _, _, _, _, _, _, _, _, _, _, _, _, _, _, 1],
@@ -13,7 +13,6 @@ mini_map = [
     [1, _, _, 1, _, _, _, _, 1, _, _, _, _, _, _, 1],
     [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
 ]
-
 
 
 class Map:
@@ -30,5 +29,6 @@ class Map:
                     self.world_map[(i, j)] = value
 
     def draw(self):
-        [pg.draw.rect(self.game.screen, 'darkgray', (pos[0] * block_size, pos[1] * block_size, block_size, block_size), 2)
+        [pg.draw.rect(self.game.screen, 'darkgray',
+                      (pos[0] * block_size, pos[1] * block_size, block_size, block_size), 2)
          for pos in self.world_map]
