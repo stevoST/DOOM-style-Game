@@ -1,4 +1,6 @@
+import pygame as pg
 import sys
+from settings import *
 from map import *
 from player import *
 import ctypes
