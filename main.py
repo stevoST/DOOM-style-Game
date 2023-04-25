@@ -5,6 +5,8 @@ from map import *
 from player import *
 import ctypes
 from raycasting import *
+from object_renderer import *
+
 
 class Game:
     def __init__(self):
@@ -17,6 +19,7 @@ class Game:
     def new_game(self):
         self.map = Map(self)
         self.player = Player(self)
+        self.object_renderer = ObjectRenderer(self)
         self.raycasting = RayCasting(self)
 
     def update(self):
@@ -30,6 +33,7 @@ class Game:
         # without this windows scale was affecting the pygame window
         ctypes.windll.user32.SetProcessDPIAware()
         self.screen.fill('black')
+        self.object_renderer.draw()
         # self.map.draw()
         # self.player.draw()
 
