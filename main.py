@@ -33,7 +33,7 @@ class Game:
     def draw(self):
         # without this windows scale was affecting the pygame window
         ctypes.windll.user32.SetProcessDPIAware()
-        self.screen.fill('black')
+        # self.screen.fill('black')
         self.object_renderer.draw()
         # self.map.draw()
         # self.player.draw()
