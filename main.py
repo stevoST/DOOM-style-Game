@@ -48,17 +48,17 @@ class Game:
         # without this windows scale was affecting the pygame window
         ctypes.windll.user32.SetProcessDPIAware()
         # 2d display-------
-        self.screen.fill('black')
+        # self.screen.fill('black')
         # -----------------
 
         # 3d projection----
-        # self.object_renderer.draw()
-        # self.weapon.draw()
+        self.object_renderer.draw()
+        self.weapon.draw()
         # -----------------
 
         # 2d display ------
-        self.map.draw()
-        self.player.draw()
+        # self.map.draw()
+        # self.player.draw()
         # -----------------
 
     # @staticmethod
