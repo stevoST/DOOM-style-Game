@@ -10,6 +10,7 @@ from sprite_object import *
 from object_handler import *
 from weapon import *
 from sound import *
+from pathfinding import *
 
 
 class Game:
@@ -32,6 +33,7 @@ class Game:
         self.object_handler = ObjectHandler(self)
         self.weapon = Weapon(self)
         self.sound = Sound(self)
+        self.pathfinding = PathFinding(self)
 
     def update(self):
         self.player.update()
